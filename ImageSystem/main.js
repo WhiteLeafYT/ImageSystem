@@ -1,0 +1,11 @@
+let post = document.querySelector("#post")
+let upload = document.querySelector("#upload")
+let submit2 = document.querySelector("#submit2")
+let img = document.querySelector("#img")
+submit2.addEventListener("click", function(e) {
+    e.preventDefault()
+    console.log(upload.files[0])
+    console.log(URL.createObjectURL(upload.files[0]))
+    img.src = URL.createObjectURL(upload.files[0])
+    document.querySelector("#post").submit()
+}) 
